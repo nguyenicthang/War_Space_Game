@@ -6,7 +6,7 @@
 #include <iostream>
 #include <ctime>
 #include "platformTools.h"
-#include <raudio.h>
+//#include <raudio.h>
 #include "platformInput.h"
 #include "otherPlatformFunctions.h"
 #include "gameLayer.h"
@@ -368,13 +368,13 @@ int main()
 #pragma endregion
 
 #pragma region audio
-	InitAudioDevice();
+//	InitAudioDevice();
 
-	//Music m = LoadMusicStream(RESOURCES_PATH "target.ogg");
+//	//Music m = LoadMusicStream(RESOURCES_PATH "target.ogg");
 	//Music m = {};
-	//UpdateMusicStream(m);
+//	//UpdateMusicStream(m);
 	//StopMusicStream(m);
-	//PlayMusicStream(m);
+//	//PlayMusicStream(m);
 
 #pragma endregion
 
@@ -392,8 +392,8 @@ int main()
 
 	while (!glfwWindowShouldClose(wind))
 	{
-		//UpdateMusicStream(m);
-		//PlayMusicStream(m);
+//		//UpdateMusicStream(m);
+//		//PlayMusicStream(m);
 
 	#pragma region deltaTime
 

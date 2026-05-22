@@ -1,3 +1,4 @@
+#define RAUDIO_STANDALONE
 #define GLM_ENABLE_EXPERIMENTAL
 #include "gameLayer.h"
 #include <glad/glad.h>
@@ -17,7 +18,7 @@
 #include <cstdio>
 #include <ctime>
 #include <glui/glui.h>
-#include <raudio.h>
+//#include <raudio.h>
 
 struct GameplayData
 {
@@ -52,7 +53,7 @@ TiledRenderer tiledRenderer[BACKGROUNDS];
 gl2d::Texture healthBar;
 gl2d::Texture health;
 
-Sound shootSound;
+//Sound shootSound;
 
 bool intersectBullet(glm::vec2 bulletPos, glm::vec2 shipPos, float shipSize)
 {
@@ -89,8 +90,8 @@ bool initGame()
 	healthBar.loadFromFile(RESOURCES_PATH "healthBar.png", true);
 	health.loadFromFile(RESOURCES_PATH "health.png", true);
 
-	shootSound = LoadSound(RESOURCES_PATH "shoot.flac");
-	SetSoundVolume(shootSound, 0.1);
+//	shootSound = LoadSound(RESOURCES_PATH "shoot.flac");
+//	SetSoundVolume(shootSound, 0.1);
 
 	backgroundTexture[0].loadFromFile(RESOURCES_PATH "background1.png", true);
 	backgroundTexture[1].loadFromFile(RESOURCES_PATH "background2.png", true);
@@ -246,7 +247,7 @@ bool gameLogic(float deltaTime)
 
 		data.bullets.push_back(b);
 
-		PlaySound(shootSound);
+//		PlaySound(shootSound);
 
 	}
 
@@ -365,7 +366,7 @@ bool gameLogic(float deltaTime)
 			b.isEnemy = true;
 			data.bullets.push_back(b);
 
-			if (!IsSoundPlaying(shootSound)) PlaySound(shootSound);
+//			if (!IsSoundPlaying(shootSound)) PlaySound(shootSound);
 
 		}
 	}

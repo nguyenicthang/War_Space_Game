@@ -1,3 +1,6 @@
+#ifndef __cplusplus
+#include <stdbool.h>
+#endif
 /**********************************************************************************************
 *
 *   raudio - A simple and easy-to-use audio library based on miniaudio
@@ -80,7 +83,7 @@
 #ifndef __cplusplus
 // Boolean type
     #if !defined(_STDBOOL_H)
-        typedef enum { false, true } bool;
+        
         #define _STDBOOL_H
     #endif
 #endif
